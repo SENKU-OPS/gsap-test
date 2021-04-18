@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  --blue-color: rgb(35, 35, 48);
+  --red-color: rgb(238, 111, 111);
+  --yellow-color: rgb(222, 235, 105);
+  background: var(--red-color);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 100vw;
+  height: 4rem;
+  background: unset;
+}
+
+.header__container {
+  height: 4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+}
+
+.header__main-header {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: --var(--red-color);
+}
+
+.header__sec-header {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--blue-color);
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.header__nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header__nav-links {
+  color: white;
+  text-align: center;
+  padding: .5rem 1rem;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+}
+
+.header__nav-links:hover {
+  background: var(--blue-color);
+}
+
+.settingBtn {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--red-color);
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.settingBtn:hover {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.hero {
+  width: 100vw;
+  height: calc(100vh - 4rem);
+  max-height: 700px;
+}
+
+.hero__container {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+}
+
+.hero__main-hero {
+  background: var(--red-color);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  z-index: 1;
+  height: 350px;
+  width: 450px;
+  background: var(--blue-color);
+  color: white;
+  padding: 2rem;
+  -webkit-box-shadow: 0.7rem 0.7rem 0rem 0rem var(--yellow-color);
+          box-shadow: 0.7rem 0.7rem 0rem 0rem var(--yellow-color);
+}
+
+.hero__card::before, .hero__card::after {
+  content: '';
+  position: absolute;
+  width: 4rem;
+  height: 5rem;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  z-index: -1;
+  background: var(--yellow-color);
+}
+
+.hero__card::after {
+  top: 5rem;
+  background: var(--blue-color);
+}
+
+.hero__sec-heading {
+  font-weight: 100;
+  letter-spacing: .2rem;
+  margin-bottom: 0rem;
+}
+
+.hero__main-heading {
+  font-size: 4rem;
+  line-height: 3.6rem;
+  letter-spacing: .1rem;
+}
+
+.hero__btn {
+  padding: .5rem 1rem;
+  font-weight: bold;
+  outline: 1px solid var(--yellow-color);
+  display: inline-block;
+  -webkit-transition-property: -webkit-box-shadow transform;
+  transition-property: -webkit-box-shadow transform;
+  transition-property: box-shadow transform;
+  transition-property: box-shadow transform, -webkit-box-shadow transform;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.hero__btn:hover {
+  -webkit-box-shadow: 0.3rem 0.3rem 0rem 0rem var(--red-color);
+          box-shadow: 0.3rem 0.3rem 0rem 0rem var(--red-color);
+  -webkit-transform: translate(-0.1rem, -0.1rem);
+          transform: translate(-0.1rem, -0.1rem);
+  opacity: 1;
+}
+
+.hero__cto {
+  background: var(--yellow-color);
+  color: var(--blue-color);
+}
+
+.hero__more {
+  color: yellow;
+  margin-right: .5rem;
+}
+
+.hero__sec-hero {
+  background-color: var(--blue-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__sec-hero h1 {
+  color: white;
+  font-weight: 200;
+  font-size: 4rem;
+  min-height: 10rem;
+  line-height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 80%;
+  outline: 2px solid white;
+  outline-offset: 1.3rem;
+  -webkit-transform: translateX(-5rem);
+          transform: translateX(-5rem);
+  text-shadow: 3px 3px black;
+}
+
+.hero__deco {
+  position: absolute;
+  width: 4rem;
+  height: 40%;
+  left: -4rem;
+  top: 10%;
+  background: var(--blue-color);
+}
+
+.hero__deco2 {
+  background: var(--yellow-color);
+  top: 50%;
+}
+/*# sourceMappingURL=index.css.map */
